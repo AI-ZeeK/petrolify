@@ -16,10 +16,32 @@ export default function TabLayout() {
   const colorScheme = useColorScheme();
 
   return (
-    <Stack>
-      <Stack.Screen name="index" options={{headerShown: false}} />
-      <Stack.Screen name="two" options={{headerShown: false}} />
-      <Stack.Screen name="three" options={{headerShown: false}} />
+    <Stack
+      screenOptions={{
+        headerTintColor: "#000000",
+        headerStyle: {
+          backgroundColor: "#ffffff",
+        },
+      }}
+    >
+      <Stack.Screen
+        name="payments"
+        options={{
+          title: "Payments",
+        }}
+      />
+      <Stack.Screen
+        name="newcard"
+        options={{
+          title: "New Card",
+        }}
+      />
+      <Stack.Screen
+        name="profile"
+        options={{
+          title: "Profile",
+        }}
+      />
     </Stack>
   );
 }
